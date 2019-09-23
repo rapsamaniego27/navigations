@@ -1,0 +1,95 @@
+:root{
+  --red: #cb3529;
+  font-size:16px;
+}
+
+
+.menu-area a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  background: var(--red);
+  height:3.125rem;
+  font-weight:bold;
+  text-decoration:none;
+  text-transform: uppercase;
+}
+
+.menu-area a:hover{
+  background:tomato;
+  color:#fff;
+}
+
+.menu-area ul{
+  display:flex;
+}
+
+
+/* This gives a horizontal align to 
+   the primary menus
+*/
+.menu-area ul li{
+  position: relative;
+  width:100%;
+  text-align:center;
+}
+
+
+.menu-area li:hover .dropdown-1 li{
+  display: block;
+  top:0;
+}
+
+.dropdown-1 ul li{
+  display:none;
+  position:relative;
+}
+
+
+.dropdown-1{
+  display:flex;
+  position:absolute;
+  flex-direction:column;
+  width:100%;
+}
+
+.dropdown-1 ul li:hover .dropdown-2 ul li{
+  display: block;
+}
+
+.dropdown-2 ul li{
+  display:none;
+}
+
+.dropdown-2{
+  display:flex;
+  flex-direction:column;
+  position:absolute;
+  top:0;
+  left:100%;
+  width:200px;
+
+}
+
+
+
+/* Defaults */
+#wrapper{
+  min-height:100%;
+}
+
+#main{
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+
+footer{
+  background-color:#000;
+  position:relative;
+  height:100px;
+  margin-top: -100px;
+  clear:both;
+  color:#fff;
+}
