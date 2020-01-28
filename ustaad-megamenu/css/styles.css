@@ -1,0 +1,159 @@
+#wrapper{
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#main{
+  flex: 1 0 auto;
+}
+
+.logo{
+  position: relative;
+  z-index: 123;
+  padding: 10px;
+  font: 18px verdana;
+  color: #7ddb07;
+  float: left;
+  width: 15%;
+}
+
+.logo a{
+  color:#7ddb07;
+}
+
+nav{
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+}
+
+/* Removed default styling */
+#cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a,
+#cssmenu, #head-mobile{
+  border:0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+}
+
+#cssmenu:after, #cssmenu>ul:after{
+  content:".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+#cssmenu #head-mobile{
+  display: none;
+}
+
+#cssmenu{
+  font-family: sans-serif;
+  background:#333;
+}
+
+/* Displays everything aligning to left */
+#cssmenu>ul>li{
+  float: left;
+}
+
+#cssmenu>ul>li>a{
+  padding:17px;
+  font-size:12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color:#ddd
+}
+
+#cssmenu>ul>li:hover>a,
+#cssmenu ul li.active a{
+  color: #fff;
+}
+
+/* Gives Green background when hovered */
+#cssmenu>ul>li:hover,
+#cssmenu ul li.active:hover,
+#cssmenu ul li.active,
+#cssmenu ul li.has-sub.active:hover{
+  background: #448d00 !important;
+}
+
+#cssmenu>ul>li.has-sub>a{
+  padding-right:30px;
+}
+
+#cssmenu>ul>li.has-sub>a:after{
+  position: absolute;
+  top: 22px;
+  right: 11px;
+  width: 8px;
+  height:2px;
+  display: block;
+  background-attachment: #ddd;
+  content: '';
+}
+
+#cssmenu>ul>li.has-sub>a:before{
+  position: absolute;
+  top: 22px;
+  right: 11px;
+  width: 8px;
+  height:2px;
+  display: block;
+  background: #ddd;
+  content: '';
+  transition: all 0.2s ease;;
+}
+
+#cssmenu>ul>li.has-sub:hover>a:before{
+  top:23px;
+  height: 0;
+}
+
+/* Hides the submenu */
+#cssmenu ul ul{
+  position: absolute;
+  left: -9999px;
+}
+
+#cssmenu ul ul li{
+  height: 0;
+  background: #333;
+  transition: all 0.2s ease;
+}
+
+
+/* This section shows the submenus when hovered */
+#cssmenu li:hover>ul{
+  left: auto;
+}
+
+#cssmenu li:hover>ul>li{
+  height: 35px;
+}
+
+#cssmenu ul ul ul{
+  margin-left: 100%;
+  top:0;
+}
+
+/* Gives spacing to the items when hovered over */
+/* These are styled when hovers are done */
+#cssmenu ul ul li a{
+  border-bottom: 1px solid rgba(150,150,150,0.15);
+  padding:11px 15px;
+  width: 170px;
+  font-size:12px;
+  color:#ddd;
+}
+
+footer{
+  flex-shrink: 0;
+  background-color:#000;
+  color:#fff;
+}
+
