@@ -1,0 +1,95 @@
+#wrapper{
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#main{
+  flex: 1 0 auto;
+}
+
+
+footer{
+  flex-shrink: 0;
+  background-color:#000;
+  color:#fff;
+}
+
+.dropdown{
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  width:80%;
+  margin: auto;
+}
+
+/* To make the submenus relative to the mainmenus  */
+.products,
+.projects{
+  position: relative;
+}
+
+.projects ul,
+.products ul{
+  position: absolute;
+  background: #fff;
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  flex-direction: column;
+  list-style: none;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  transform: translateY(-10px);
+}
+
+.projects a,
+.products a{
+  color: #000 !important;
+  text-decoration: none;
+}
+
+.projects li, 
+.products li{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.projects li:hover,
+.products li:hover {
+  background: rgb(218, 179, 191);
+}
+
+.dropdown button, 
+.home{
+  background: none;
+  border:none; 
+  color:#fff;
+  text-decoration: none;
+  cursor:pointer;
+  font-size: 18px;
+}
+
+
+
+.dropdown button:hover,
+.home:hover{
+  color: rgb(224, 224, 224);
+}
+
+/* Something happens to child elementswhen button is cliced */
+.projects button:focus + ul, 
+.products button:focus + ul{
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
+}
