@@ -1,0 +1,47 @@
+@media #{$device-sm}{
+ .burgers{
+  display:block !important;
+ }
+
+ .menu-nav-container{
+  position:absolute;
+  right:0px;
+  height:100vh;
+  top:0;
+  background:$dark;
+  width:60%;
+  transform: translateX(100%);
+  z-index:5000;
+  
+  .top-menu{
+   display:flex;
+   flex-direction: column;
+   margin-top:20px;
+   
+   li{
+    margin: 0 1.5rem;
+    text-align: left;
+    
+   }
+  }
+ }
+
+ .menu-overlay{
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 4000;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  pointer-events: none;
+ }
+
+ .menu-overlay--show{
+   visibility: visible;
+   background: rgba(0, 0, 0, 0);
+ }
+
+}
+
