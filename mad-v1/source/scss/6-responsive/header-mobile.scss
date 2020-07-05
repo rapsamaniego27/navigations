@@ -1,4 +1,8 @@
 @media #{$device-sm}{
+
+  .header__wrapper{
+    padding: 0 2rem;
+  }
  .burgers{
   display:block !important;
  }
@@ -12,6 +16,8 @@
   width:60%;
   transform: translateX(100%);
   z-index:5000;
+  transition: all 0.3s $anim-primary;
+  margin:0 -2rem;
   
   .top-menu{
    display:flex;
@@ -27,21 +33,30 @@
  }
 
  .menu-overlay{
-  display: block;
   position: fixed;
   top: 0;
   bottom: 0;
   width: 100%;
   z-index: 4000;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
   visibility: hidden;
   pointer-events: none;
+  display:block;
+  margin:0 -2rem;
  }
 
  .menu-overlay--show{
    visibility: visible;
-   background: rgba(0, 0, 0, 0);
+   background: rgba(0, 0, 0, 0.5);
+   pointer-events: auto;
+   cursor:pointer;
  }
+
+ .menu--show{
+   transform: translateX(0);
+ }
+
+ 
 
 }
 
