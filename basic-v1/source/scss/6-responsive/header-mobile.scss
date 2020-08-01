@@ -12,11 +12,11 @@
   right:0px;
   height:100vh;
   top:0;
-  background:$dark;
+  background:var(--dark);
   width:60%;
   transform: translateX(100%);
   z-index:5000;
-  transition: all 0.3s $anim-primary;
+  transition: all 0.3s var(--anim-primary);
   margin:0 -2rem;
   
   .top-menu{
@@ -45,6 +45,7 @@
   margin:0 -2rem;
  }
 
+ /* Show effect of Menu */
  .menu-overlay--show{
    visibility: visible;
    background: rgba(0, 0, 0, 0.5);
@@ -56,7 +57,16 @@
    transform: translateX(0);
  }
 
- 
+}
 
+@media #{$device-md} {
+  .header__wrapper {
+    padding: 0 2rem;
+  }
+
+  .header__logo-img {
+    width: 17vw;
+    min-width: 100px;
+  }
 }
 
