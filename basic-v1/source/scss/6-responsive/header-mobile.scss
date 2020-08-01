@@ -25,10 +25,17 @@
    margin-top:20px;
    
    li{
-    margin: 0 1.5rem;
+    margin: 0 1rem;
     text-align: left;
+    height:auto;
+    display:block;
+    font-size:1rem;
     
+      &:not(:last-of-type) {
+        border-bottom: 2px solid var(--white);
+      }
    }
+
   }
  }
 
